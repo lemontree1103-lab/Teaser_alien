@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외계+인 1부 선.업.티 — 인터랙티브 티저</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- html2canvas (결과 카드 캡처용) -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <!-- Kakao SDK -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+            integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx"
+            crossorigin="anonymous"></script>
+    <script>Kakao.init('YOUR_KAKAO_KEY');</script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ▶ START PAGE -->
+        <section id="start-page" class="active">
+            <img id="main-title-img" src="./images/Title2.png" alt="타이틀" />
+
+            <h1 class="title">선택하면 스토리 이해도 업!되는 인터랙티브 티저</h1>
+
+            <p class="subtitle">
+                스토리를 따라 선택하고, 당신의 엔딩을 만나보세요.
+            </p>
+
+            <button id="start-btn" class="btn main-btn">시작하기</button>
+        </section>
+
+
+        <!-- ▷ QNA PAGE -->
+        <section id="qna-page" class="page">
+
+            <!-- 진행바 -->
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+<!-- 질문 제목 -->
+<h2 id="question-title" class="question-title">질문이 들어갑니다</h2>
+
+<!-- 질문 설명 -->
+<p id="question-desc" class="question-desc">스토리 설명이 들어갑니다</p>
+
+<!-- 선택지 -->
+<div class="choices-wrap">
+
+    <!-- A 선택 -->
+   <button id="choice-a" class="choice-btn" data-choice="A">
+    <img class="choice-img" src="" alt="">
+    <span class="choice-title">선택 A</span>
+</button>
+
+<button id="choice-b" class="choice-btn" data-choice="B">
+    <img class="choice-img" src="" alt="">
+    <span class="choice-title">선택 B</span>
+</button>
+
+
+</div>
+
+
+            <!-- 다음 버튼 -->
+            <button id="next-match-btn" class="btn disabled" disabled>다음</button>
+        </section>
+
+
+        <!-- ▶ RESULT PAGE -->
+        <section id="result-page" class="page">
+            <h1 class="result-header">당신의 세계관 결과는…</h1>
+
+            <div id="result-card" class="result-card">
+                <img id="result-img" src="https://placehold.co/300x180" alt="result image">
+                <h2 id="result-title">결과 세계관</h2>
+                <p id="result-desc">결과 설명이 들어갑니다.</p>
+            </div>
+
+            <button id="download-btn" class="btn share-btn">엔딩 카드 다운로드</button>
+            <button id="kakao-share-btn" class="btn share-btn">카카오톡 공유하기</button>
+
+            <button id="restart-btn" class="btn restart-btn">다시 하기</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
